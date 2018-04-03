@@ -1,0 +1,43 @@
+{
+"Team Ocelots":[
+ {
+  "FirstName":"Michael",
+  "LastName":"Pedzimaz",
+  "PreferredName":"Mike",
+  "TeamName":"The Ocelots",
+  "SeatLocation":"1-2",
+  "Role":["UI Designer"]
+ },
+ {
+  "FirstName":"Jake",
+  "LastName":"na",
+  "PreferredName":"Jake",
+  "TeamName":"The Ocelots",
+  "SeatLocation":"na",
+  "Role":["UI Designer"]
+ },
+ {
+  "FirstName":"Edwin",
+  "LastName":"Moses",
+  "PreferredName":"Julian",
+  "TeamName":"The Ocelots",
+  "SeatLocation":"0-3",
+  "Role":["Developer"]
+ },
+ {
+  "FirstName":"Jace",
+  "LastName":"na",
+  "PreferredName":"Jace",
+  "TeamName":"The Ocelots",
+  "SeatLocation":"na",
+  "Role":["na"]
+ },
+ {
+  "FirstName":"Thaddeus",
+  "LastName":"Albert",
+  "PreferredName":"Thad",
+  "TeamName":"The Ocelots",
+  "SeatLocation":"na",
+  "Role":["Developer"]
+ }
+ ]}
