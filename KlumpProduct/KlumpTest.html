@@ -1,0 +1,56 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js""></script>
+</head>
+
+<body>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<h1>Klump Test</h1>
+<p><input onclick="AddStudent()" type="button" value="Add Student"/></p>
+
+<script>
+var urls = ["https://michael-pedzimaz-webapp.azurewebsites.net/my-information.json",
+				"https://jakeisalsoclueless.azurewebsites.net/myinformation.json",
+				"https://riotjuice.azurewebsites.net/my-information.json",
+				"https://softwareengjmh.azurewebsites.net/format.JSON",
+				"https://newtestdocument.azurewebsites.net/Format.json"];
+
+function AddStudent(){
+	var person = prompt("Please enter your json url:", "");
+	//var _person = person + '?callback=?';
+	getJson(person);
+ }
+</script>
+
+<input onclick="getJson(urls[0])" type="button" value="Mike's JSON"/>
+<input onclick="getJson(urls[1])" type="button" value="Jake's JSON"/>
+<input onclick="getJson(urls[2])" type="button" value="Julian's JSON"/>
+<input onclick="getJson(urls[3])" type="button" value="Jace's JSON"/>
+<input onclick="getJson(urls[4])" type="button" value="Thad's JSON"/>
+
+<div class="mypanel"></div>
+
+<script>
+function getJson(url){
+	$.getJSON(url, function(data){
+		console.log(data);
+		var info = 'First name: ${data.FirstName}<br> Last Name: ${data.LastName}<br> Preferred Name: ${data.PreferredName}<br> Team Name: ${data.TeamName}<br> Seat Location: ${data.SeatLocation}<br> Role: ${data.Role}<br>'
+					
+		$(".mypanel").html(info);
+	});
+}
+</script>
+</body>
+</html>
+
