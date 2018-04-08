@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<!-- <meta charset="UTF-8"> -->
+		<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css"> -->
+		<!-- <script type = "text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+		<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+		
+
+<script>
+/*var urls = ["https://michael-pedzimaz-webapp.azurewebsites.net/my-information.json",
+				"https://jakeisalsoclueless.azurewebsites.net/myinformation.json",
+				"https://riotjuice.azurewebsites.net/my-information.json",
+				"https://softwareengjmh.azurewebsites.net/format.JSON",
+				"https://newtestdocument.azurewebsites.net/Format.json"];
+*/
+function addStudent(){
+	var person = prompt("input json url", "");
+	getJSON(person);
+}
+
+</script>
+
+
+</head>
+<body>
+		
+	
+		
+	
+<h1>Team Ocelots Klump Product</h1>
+<!--
+<p>
+<input onclick="getJSON(urls[0])" type="button" value="Mike's JSON"/>
+<input onclick="getJSON(urls[1])" type="button" value="Jake's JSON"/>
+<input onclick="getJSON(urls[2])" type="button" value="Julian's JSON"/>
+<input onclick="getJSON(urls[3])" type="button" value="Jace's JSON"/>
+<input onclick="getJSON(urls[4])" type="button" value="Thad's JSON"/>
+</p>
+-->
+<p><input onclick="addStudent()" type="button" value="Add Student"/></p>
+	
+
+<div style="background-color:lightgreen">
+	<h2>JSON Data:</h2>
+	<p id="FN">First Name: </p>
+	<p id="LN">Last Name: </p>
+	<p id="PR">Preferred name: </p>
+	<p id="TN">Team Name: </p>
+	<p id="SL">Seat Location: </p>
+
+</div>
+<script>
+function getJSON(url){
+	$.getJSON(url, function(data){
+		console.log(data);
+	/*$("#FN").append(data.FirstName);
+	$("#LN").append(data.LastName);
+	$("#PR").append(data.PreferredName);
+	$("#TN").append(data.TeamName);
+	$("#SL").append(data.SeatLocation);
+	});*/
+	/*$.ajax({
+		url:url,
+		dataType: 'jsonp',
+		success:function(data){
+			$("#FN").append(data.FirstName);
+			$("#LN").append(data.LastName);
+			$("#PR").append(data.PreferredName);
+			$("#TN").append(data.TeamName);
+			$("#SL").append(data.SeatLocation);
+			alert("Success!");
+		},
+		error:function(){
+			alert("Error");
+		}
+	*/
+	});
+}		
+</script>
+		
+</body>
+</html>
