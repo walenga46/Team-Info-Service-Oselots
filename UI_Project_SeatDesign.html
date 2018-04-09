@@ -49,6 +49,7 @@ function getJson(url){
 		console.log(data);
 		var seat = data.SeatLocation;
 		var name = data.PreferredName;
+		var x = new Date(document.lastModified);
 		seat = seat.split("-");
 		seat = seat[1] + "-" + seat[0];
 		var seatButtonId = "button"+seat;
@@ -56,6 +57,7 @@ function getJson(url){
 		console.log(name);
 		document.getElementById(seat).value = name;
 		jsonFiles[seatButtonId] = data;
+		
 		
 		var kid = document.getElementById(seat).innerHTML = "<input onclick=\"showJson(id)\" type=\"button\" value=\""+name+"\" id=\""+seatButtonId+"\"/>";
 		kids = [];
